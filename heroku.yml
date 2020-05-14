@@ -1,3 +1,5 @@
 build:
   docker:
     web: Dockerfile
+run:
+     web: docker buil -t app . && docker run --name app -p 80:80 app
