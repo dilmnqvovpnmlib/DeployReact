@@ -24,4 +24,3 @@ COPY ./conf/default /etc/nginx/sites-enabled/default
 EXPOSE 80
 
 CMD ["bash", "./docker-entrypoint.sh"]
-#CMD ["supervisord"]
