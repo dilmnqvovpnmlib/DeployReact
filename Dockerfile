@@ -13,6 +13,10 @@ WORKDIR /app
 ADD ./test .
 ADD ./docker-entrypoint.sh .
 
+# install npm packages.
+RUN npm install
+RUN npm run build
+
 # copy configuration files.
 COPY ./conf/supervisord.conf /etc/supervisor/conf.d/superfisord.conf
 COPY ./conf/default /etc/nginx/sites-enabled/default
